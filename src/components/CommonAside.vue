@@ -7,7 +7,7 @@
     text-color="#fff"
     active-text-color="#ffd04b"
   >
-    <h3>通用后台管理系统</h3>
+    <h3>{{ isCollapse ? "后台" : "通用后台管理系统" }}</h3>
     <el-menu-item
       v-for="item in noChildren"
       :key="item.name"
@@ -42,6 +42,7 @@
 }
 .el-menu {
   height: 100vh;
+  border-right: none;
   h3 {
     color: #fff;
     text-align: center;
