@@ -64,6 +64,7 @@
 </template>
 
 <script>
+import { getDate } from "../api";
 export default {
   data() {
     return {
@@ -120,6 +121,11 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    getDate().then((data) => {
+      console.log(data);
+    });
   },
 };
 </script>
